@@ -49,4 +49,181 @@ section:before {
   width: 350px;
   height: calc(100% - 80px);
   background: #0f3959;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container .contact__info h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container .contact__info .info {
+  position: relative;
+  margin: 20px 0;
+}
+
+.container .contact__info .info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+/* Grab the first span from the parent li element */
+.container .contact__info .info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+
+.container .contact__info .info li span:nth-child(1) img {
+  max-width: 100%;
+
+  /* Make images white */
+  /* TODO: Read more about CSS filter */
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+.container .contact__info .info li span:nth-child(2) {
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 300;
+  opacity: 0.5;
+  align-self: center;
+}
+
+.container .contact__info .info li:hover span:nth-child(1) img,
+.container .contact__info .info li:hover span:nth-child(2) {
+  opacity: 1;
+}
+
+.container .contact__info .social {
+  position: relative;
+  display: flex;
+}
+
+.container .contact__info .social li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.container .contact__info .social li a {
+  text-decoration: none;
+}
+
+.container .contact__info .social li a img {
+  filter: invert(1);
+  opacity: 0.5;
+}
+
+.container .contact__info .social li:hover a img {
+  opacity: 1;
+}
+
+.contact__form {
+  position: absolute;
+  padding: 70px 50px;
+  background: #fff;
+  width: calc(100% - 150px);
+  margin-left: 150px;
+  padding-left: 250px;
+  height: 100%;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.input__box textarea {
+  font-family: inherit;
+}
+
+.contact__form h2 {
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.form__box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.input__box {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+
+.input__box.w-50 {
+  width: 47%;
+}
+
+.input__box.w-100 {
+  width: 100%;
+}
+
+.optional {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.input__box input,
+.input__box textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 200;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+}
+
+.input__box textarea {
+  min-height: 120px;
+}
+
+.input__box span {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  padding: 5px 0;
+  font-size: 16px;
+  font-weight: 200;
+  color: #333;
+  opacity: 0.7;
+  transition: 300ms;
+}
+
+.input__box input:focus ~ span,
+.input__box input:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ff568c;
+}
+
+.input__box input[type='submit'] {
+  position: relative;
+  cursor: pointer;
+  background: #0f3959;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 10px 0;
+}
+
+.input__box input[type='submit']:hover {
+  background: #ff568c;
 }
